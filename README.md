@@ -1,8 +1,13 @@
 # copy-to-clipboard-react
 
-Based on https://github.com/nkbt/react-copy-to-clipboard
+This was created to have a copy to clipboard component that works with TypeScript.
+
+It's based on the JavaScript component from https://github.com/nkbt/react-copy-to-clipboard.
+
+This is based on https://github.com/nkbt/react-copy-to-clipboard
 
 ## Installation
+
 ```
-npm i react-copy-to-clipboard
+npm i copy-to-clipboard-react
 ```

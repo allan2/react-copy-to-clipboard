@@ -1,7 +1,7 @@
 import * as React from "react";
 import copy from "copy-to-clipboard";
 
-export const CopyToClipboard = (props: {
+interface Props {
 	text: string;
 	children: (childProps: { copyToClipboard: () => void }) => React.ReactNode;
 	onCopy: (onCopyProps: { text: string; copied: boolean }) => void;
@@ -10,11 +10,13 @@ export const CopyToClipboard = (props: {
 		message?: string;
 		format?: string;
 	};
-}) => {
+}
+
+export const CopyToClipboard = ({ text, children, onCopy, options }: Props) => {
 	const copyToClipboard = (): void => {
-		const result: boolean = copy(props.text, props.options);
-		props.onCopy({ text: props.text, copied: result });
+		const result: boolean = copy(text, options);
+		onCopy({ text: text, copied: result });
 	};
 
-	return <>{props.children({ copyToClipboard })}</>;
+	return <>{children({ copyToClipboard })}</>;
 };
