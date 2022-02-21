@@ -1,7 +1,7 @@
 {
 	"name": "react-copy-to-clipboard-copy",
 	"description": "Copy to clipboard component that works with TypeScript",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"private": false,
 	"dependencies": {
 		"copy-to-clipboard": "^3.3.1",
